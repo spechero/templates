@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  spec:
+    image: spechero/ruby-rspec
+    volumes:
+      - ./ruby_app:/code:cached
+    command: bundle exec guard

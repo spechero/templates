@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+fswatch -0or . | xargs -0 bundle exec rspec
