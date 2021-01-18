@@ -1,5 +1,19 @@
 #!/bin/bash
 
-set -e
+while true; do
+  bundle exec rspec
+  # tests_passed=$?
 
-fswatch -0or . | xargs -0 bundle exec rspec
+  # if $tests_passed; then
+  #   git add .
+  #   git commit -m "Passing specs"
+  # else
+  #   if [ "$SPECHERO_ROLE" != "hero" ]; then
+  #     git add .
+  #     git commit -m "Failing specs"
+  #   fi
+  # fi
+
+  # Wait for the next file to change
+  inotifywait -rq . || break
+done
