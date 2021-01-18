@@ -5,4 +5,4 @@ services:
     image: spechero/ruby-rspec
     volumes:
       - ./ruby_app:/code:cached
-    command: bin/start_tests
+    command: bash bin/start_tests
