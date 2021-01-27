@@ -1,0 +1,3 @@
+version: '1.0'
+spec-file: test/elixir_app_test.exs
+src-file: lib/elixir_app.ex

@@ -4,5 +4,5 @@ services:
   spec:
     image: spechero/elixir
     volumes:
-      - ./elixir_app:/code:cached
+      - .:/code:cached
     command: iex
