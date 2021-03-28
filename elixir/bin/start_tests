@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while true; do
+
+  if mix test; then
+    echo "Tests passed"
+    # git add .
+    # git commit -m "Passing specs"
+  else
+    echo "Tests failed"
+    # if [ "$SPECHERO_ROLE" != "hero" ]; then
+    #   git add .
+    #   git commit -m "Failing specs"
+    # fi
+  fi
+
+  # Wait for the next file to change
+  inotifywait -rq . || break
+done

@@ -5,4 +5,4 @@ services:
     image: spechero/elixir
     volumes:
       - .:/code:cached
-    command: iex
+    command: bash bin/start_tests

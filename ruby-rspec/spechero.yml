@@ -1,2 +1,3 @@
 version: '1.0'
-main-file: ruby_app/spec/example_spec.rb
+spec-file: ruby_app/spec/example_spec.rb
+src-file: lib/elixir_app.ex
